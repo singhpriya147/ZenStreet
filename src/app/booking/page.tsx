@@ -1,18 +1,14 @@
 "use client"
 import { useState } from 'react';
 import './booking.css'
-import PhoneInput from 'react-phone-input-2';
-import 'react-phone-input-2/lib/style.css'
+
+
 import { useAppContext } from '@/context';
 import { useRouter } from 'next/navigation';
 const Booking = () => {
-const[phoneNumber,setPhoneNumber]=useState('')
+
   const router = useRouter();
-const handlePhoneChange=(value)=>{
 
-setPhoneNumber(value);
-
-}
 
 
 
@@ -43,14 +39,7 @@ const handleClick=()=>{
                 <input type='text' placeholder='Last Name' />
               </div>
               <input type='email' name='' id='' placeholder='E-mail' />
-              <PhoneInput
-                country={'us'}
-                value={phoneNumber}
-                onChange={handlePhoneChange}
-                inputProps={{
-                  required: true,
-                }}
-              />
+              
               {/* {!valid &&  <p>please enter a valid 10 digit number</p>} */}
               <span style={{ fontStyle: 'italic' }}>
                 i. You will receive booking details on WhatsApp
