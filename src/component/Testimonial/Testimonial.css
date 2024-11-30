@@ -1,0 +1,11 @@
+.testimonial-wrapper{
+ width: 200px;
+ height: 200px;
+ background-color: white;
+ border-radius: 12px;
+ padding:1rem;
+ display: flex;
+ gap:2rem;
+ flex-direction: column;
+ box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}

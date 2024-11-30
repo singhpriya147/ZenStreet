@@ -1,0 +1,58 @@
+a{
+ text-decoration:underline ;
+ color: rgb(7, 7, 242);
+}
+.cred{
+ display: flex;
+ flex-direction: row;
+ gap: 1rem;
+ margin:0.5rem;
+}
+.available{
+ display: flex;
+ flex-direction: row;
+gap:1rem;
+}
+.ways{
+ display: flex;
+ align-items: center;
+ justify-self: center;
+ flex-direction: column;
+}
+.availiblitiy{
+ height: 50px;
+ width: 50px;
+ background-color: rgb(208, 251, 251);
+ border-radius: 12px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.therapy{
+ display: flex;
+ flex-wrap: wrap;
+ gap:1rem;
+padding-top: 1rem ;
+}
+.therapy-type{
+ border:1px solid black;
+ border-radius: 25px;
+ padding:0.5rem;
+}
+.place-lang{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
+ padding:2rem;
+}
+.testimonial-container{
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+gap: 3rem;
+/* background-color:pink; */
+align-items: center;
+justify-content: center;
+padding: 1rem;
+}

@@ -1,0 +1,30 @@
+.confirmed-page{
+ background-color: rgb(255, 255, 255);
+display: flex;
+/* align-items: center; */
+justify-content: center;
+height: 100vh;
+ 
+padding: 4rem;
+}
+.confirmed-wrapper{
+width: 50%;
+display: flex;
+flex-direction: column;
+gap: 5rem;
+
+margin: 0 auto;
+/* background-color: aqua; */
+
+}
+.confimed-header{
+ text-align: center;
+ display: flex;
+ gap: 2rem;
+ flex-direction: column;
+}
+
+
+li{
+ /* list-style:circle; */
+}
