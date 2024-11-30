@@ -1,47 +1,81 @@
 import './ProfileCard.css'
 import { FaArrowLeftLong } from 'react-icons/fa6';
-import therapist from '../../app/assets/free-photo-of-a-woman-in-a-black-and-white-photo-removebg-preview.png'
-import { IoShareSocialOutline } from 'react-icons/io5';
+import therapist from '../../app/assets/girlImage.jpg'
+
 import { IoLocationOutline } from 'react-icons/io5';
-import { IoMdShare } from 'react-icons/io';
-import BlueTick from '../../app/assets/icons/Vector.png'
+
+import ShareBlue from '../../app/assets/icons/share-blue.svg'
+
 import Image from 'next/image';
 import { useState } from 'react';
-import Share from '../share/Share';
+import { useRouter } from 'next/navigation';
+import ShareIcon from '../../app/assets/icons/share.svg'
+import Varified from '../../app/assets/icons/verified.svg'
+import SharePopUp from '../sharePopup/SharePopUp';
+
 const ProfileCard = () => {
   const[isShareOpen,setIsShareOpen]=useState(false);
+     const router = useRouter();
   const toggleShare=()=>{
     setIsShareOpen(!isShareOpen);
   }
+
+
+  const handleBook=()=>{
+  router.push('/service');
+  }
   return (
     <section className='profile-wrapper'>
-      <div>
+      <div className='go-back'>
         <FaArrowLeftLong style={{ color: 'white' }} />
         Back
       </div>
-      <div className='profile-card'>
-        <IoShareSocialOutline />
-        <div className='img-container'>
-          <Image src={therapist} alt='therapist' className='img' />
-        </div>
-        <h2>
-          <IoMdShare  onClick={toggleShare}/>
-          {isShareOpen && <Share onClose={toggleShare}/> }
-          Swetha Varma{' '}
-          <Image src={BlueTick} height={20} width={20} alt='blueTick' />
-        </h2>
 
-        <span>Consultant Clinical Psychologist</span>
-        <h3>10+ Years of experience</h3>
-        <h3>Starts at 1,200/session</h3>
-        <h4>
-          <IoLocationOutline />
-          Block A2, Delhi
-        </h4>
+      <div className='profile-card-wrapper'>
+        <div className='profile-card'>
+          <div className='share'>
+            <ShareBlue />
+          </div>
+
+          <div className='img-container'>
+            <Image src={therapist} alt='therapist' className='img' />
+          </div>
+          <h3 className='name'>
+            <ShareIcon onClick={toggleShare} />
+            {isShareOpen && <SharePopUp onClose={toggleShare} />}
+            Swetha Varma {' '} <Varified />
+          </h3>
+
+          <span style={{ color: 'grey' }}>
+            Consultant Clinical Psychologist
+          </span>
+          <h3 style={{ fontWeight: '500', fontSize: '16px' }}>
+            10+ Years of experience
+          </h3>
+          <h3 style={{ fontWeight: '500', fontSize: '14px' }}>
+            Starts at{' '}
+            <span style={{ fontWeight: '500', fontSize: '20px' }}>
+              1,200{' '}
+              <span
+                style={{ fontWeight: '500', fontSize: '16px', color: 'grey' }}
+              >
+                /session
+              </span>
+            </span>
+          </h3>
+          <h4>
+            <IoLocationOutline />
+            <span
+              style={{ fontWeight: '500', fontSize: '16px', color: 'grey' }}
+            >
+             
+              Block A2, Delhi
+            </span>
+          </h4>
+        </div>
+
+        <button className='profile-btn' onClick={handleBook}>Book Session</button>
       </div>
-     
-       <button className='profile-btn'>Book Session</button>
-      
     </section>
   );
 }

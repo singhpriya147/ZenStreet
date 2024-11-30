@@ -1,7 +1,7 @@
 export const slot = [
   {
     label: 'Morning',
-    slots: ['8:00-8:45AM', '9:00-9:45AM', '11:00-11:45AM', '11:00-11:45AM'],
+    slots: ['8:00-8:45AM', '9:00-9:45AM', '11:00-11:45AM', '11:45-12:15PM'],
   },
   {
     label: 'Afternoon',
@@ -9,6 +9,6 @@ export const slot = [
   },
   {
     label: 'Evening',
-    slots: ['5:00-5:45AM', '6:00-6:45AM', '7:00-7:45AM', '8:00-8:45AM'],
+    slots: ['5:00-5:45PM', '6:00-6:45PM', '7:00-7:45PM', '8:00-8:45PM'],
   },
 ];

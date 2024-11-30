@@ -87,3 +87,17 @@ gap:1rem;
 .in-person{
  background-color: #1F9FE6;
 }
+
+.slot-booking-btn{
+ width: 50%;
+ border-radius: 5px;
+ border:none;
+ padding: 10px 10px;
+}
+.calender-container{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ gap:2rem;
+}

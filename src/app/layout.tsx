@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 // import localFont from "next/font/local";
-import { Poppins } from 'next/font/google';
+// import { Poppins } from 'next/font/google';
 import "./globals.css";
 import { AppWrapper } from '../context/index';
-const poppins = Poppins({
-  subsets: ['latin'], // Specify the character subset you need
-  variable: '--font-poppins', // Optional CSS variable for the font
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'], // Include the weights you want
-});
+// const poppins = Poppins({
+//   subsets: ['latin'], // Specify the character subset you need
+//   variable: '--font-poppins', // Optional CSS variable for the font
+//   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'], // Include the weights you want
+// });
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <AppWrapper>
       <html lang='en'>
-        <body className={poppins.variable}>{children}</body>
+        <body >{children}</body>
       </html>
     </AppWrapper>
   );

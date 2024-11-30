@@ -1,88 +1,4 @@
 
-// "use client"
-
-// import React, { useEffect, useState } from 'react'
-// import Calendar from '@/component/Calender/Calender'
-// import Vc  from '../assets/icons/vc.svg';
-// import Phone from '../assets/icons/phone.svg'
-// import './slot.css';
-// import {slot} from '../assets/slotList.js'
-
-// import { useAppContext } from '@/context';
-
-// const Slot = () => {
-
-// const[isSelected,setIsSelected]=useState(false);
-
-//  const buttonStyle = {
-//    backgroundColor: isSelected ? 'green' : 'blue',
-//    color: 'white',
-//    padding: '10px 20px',
-//    border: 'none',
-//    cursor: 'pointer',
-//    borderRadius: '5px',
-//  };
-
-
-//   const { setSelectedSlot }=useAppContext();
- 
-// const handleSlotClick = (slot: string) => {
-//   setSelectedSlot(slot);
-//   setIsSelected((prevSelected) => !prevSelected);
-  
-// };
-  
-//   return (
-//     <div className='slot-page'>
-//       <div className='therapy-mode'>
-//         <h3>Select therapy mode</h3>
-//         <div className='mode-opt'>
-//           <div className='mode'>
-//             <Vc />
-//             <span>Video</span>
-//           </div>
-//           <div className='mode'>
-//             <Phone />
-//             <span>Call</span>
-//           </div>
-//         </div>
-//       </div>
-//       <div className='slot-selection'>
-//         <div className='filter'>
-//           <h2>Filter By</h2>
-//           <div>
-//             <button>Slots</button>
-//             <button>Dates</button>
-//           </div>
-//         </div>
-//         <div className='slots-list'>
-//           <h3>Select slots</h3>
-//           <div className='slots'>
-//             {slot.map((item, index) => (
-//               <div key={index} className='slot'>
-//                 <p>{item.label}</p>
-//                 <ul className='slot-list'>
-//                   {item.slots.map((slot, idx) => (
-//                     <button
-//                      style={buttonStyle}
-//                       key={idx}
-//                       onClick={() => handleSlotClick(slot)}
-//                     >
-//                       {slot}
-//                     </button>
-//                   ))}
-//                 </ul>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//         <Calendar />
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Slot
 
 
 
@@ -122,13 +38,15 @@ const Slot = () => {
     setContextSelectedSlot(slot); 
   };
 
+  
+
   return (
     <div className='slot-page'>
       <div className='therapy-mode'>
         <h3>Select therapy mode</h3>
         <div className='mode-opt'>
           <div className='mode in-person'>
-            <Live/>
+            <Live />
             <span>In-person</span>
           </div>
           <div className='mode'>
@@ -170,7 +88,11 @@ const Slot = () => {
             ))}
           </div>
         </div>
-        <Calendar />
+        <div className='calender-container'>
+          <Calendar />
+
+          <button className='slot-booking-btn' >Proceed</button>
+        </div>
       </div>
     </div>
   );

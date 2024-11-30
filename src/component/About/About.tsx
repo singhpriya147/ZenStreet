@@ -22,14 +22,17 @@ const toggleTestimonials = () => {
 };
  const {text}=about;
   return (
-    <div>
-      <h2>About Me</h2>
-      <p>
-        {showMore ? text : `${text.substring(0, 290)}`}
-        <a className='show' onClick={() => setShowMore(!showMore)}>
-          {showMore ? 'show less' : 'show more'}
-        </a>
-      </p>
+    <div className='about-section'>
+      <div>
+        <h2>About Me</h2>
+        <p style={{textAlign:'justify'}}>
+          {showMore ? text : `${text.substring(0, 290)}`}
+          <a className='show' onClick={() => setShowMore(!showMore)}>
+            {showMore ? ' show less' : ' read more'}
+          </a>
+        </p>
+      </div>
+
       <div>
         <h3>Credentials</h3>
         {credentials.map((cred, index) => (
@@ -71,7 +74,7 @@ const toggleTestimonials = () => {
       </section>
       <section className='place-lang'>
         <div>
-          <h3>Iam from</h3>
+          <h3>I am from</h3>
           <span>Chennai,India</span>
         </div>
         <div>
@@ -80,13 +83,13 @@ const toggleTestimonials = () => {
         </div>
       </section>
       <section>
-        <div>
+        <div className='testimonial-header'>
           <h3>Client Testimonials</h3>
           <span
             onClick={toggleTestimonials}
             style={{
               cursor: 'pointer',
-              color: 'blue',
+               color: '#005DC6',
               textDecoration: 'underline',
             }}
           >

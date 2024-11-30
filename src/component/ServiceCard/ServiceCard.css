@@ -1,7 +1,7 @@
 .service-card{
  background:linear-gradient(#0093FE,#005BB0);
  width: 300px;
- height: 400px;
+ height: 450px;
  border-radius: 14px;
  display: flex;
  flex-direction: column;

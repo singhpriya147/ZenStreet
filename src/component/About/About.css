@@ -1,12 +1,18 @@
 a{
  text-decoration:underline ;
- color: rgb(7, 7, 242);
+ color: #005DC6;
 }
 .cred{
  display: flex;
  flex-direction: row;
  gap: 1rem;
  margin:0.5rem;
+}
+
+.about-section{
+ display: flex;
+ flex-direction: column;
+ gap: 3rem;
 }
 .available{
  display: flex;
@@ -22,7 +28,7 @@ gap:1rem;
 .availiblitiy{
  height: 50px;
  width: 50px;
- background-color: rgb(208, 251, 251);
+ background-color: #D4EAFF;
  border-radius: 12px;
 display: flex;
 align-items: center;
@@ -44,7 +50,13 @@ padding-top: 1rem ;
  flex-direction: row;
  align-items: center;
  justify-content: space-between;
- padding:2rem;
+ /* padding:2rem; */
+}
+.testimonial-header{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
 }
 .testimonial-container{
 display: flex;

@@ -4,10 +4,10 @@ import './booking.css'
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css'
 import { useAppContext } from '@/context';
-
+import { useRouter } from 'next/navigation';
 const Booking = () => {
 const[phoneNumber,setPhoneNumber]=useState('')
-
+  const router = useRouter();
 const handlePhoneChange=(value)=>{
 
 setPhoneNumber(value);
@@ -18,15 +18,19 @@ setPhoneNumber(value);
 
 const { selectedSlot, BookingDate } = useAppContext();
 
+
+const handleClick=()=>{
+  router.push('/confirmed');
+}
   return (
     <section className='booking'>
       <div className='booking-wrapper'>
         <div className='date-price'>
-          <h3>Selected Slot and Date</h3>
-          <p>Slot: {selectedSlot || 'No slot selected'}</p>
-          <h1>Your Booking</h1>
+          <h4>Selected Slot and Date</h4>
+          <p>{selectedSlot || 'No slot selected'}</p>
+          <h4>Your Booking</h4>
           {BookingDate ? (
-            <p>Your selected booking date is: {BookingDate.toDateString()}</p>
+            <p> {BookingDate.toDateString()}</p>
           ) : (
             <p>No booking date selected yet.</p>
           )}
@@ -69,9 +73,11 @@ const { selectedSlot, BookingDate } = useAppContext();
               <button className='verification'>Verify</button>
             </div>
           </div>
-          <div>
-            <button>Book Session</button>
-          </div>
+        </div>
+        <div style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
+          <button className='slot-booking-btn' onClick={handleClick}>
+            Book Session
+          </button>
         </div>
       </div>
     </section>

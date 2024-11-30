@@ -1,6 +1,16 @@
+"use client"
+
+
 import './ServiceCard.css'
+import { useRouter } from 'next/navigation';
+
 
 const ServiceCard = ({price,type,feat,time}) => {
+ const router = useRouter();
+const handleService=()=>{
+ router.push('/slot');
+}
+
   return (
     <div className='service-card'>
       <h2>{price}</h2>
@@ -18,7 +28,7 @@ const ServiceCard = ({price,type,feat,time}) => {
           </li>
         ))}
       </ul>
-      <button className='service-btn'>Proceed</button>
+      <button className='service-btn' onClick={handleService}>Proceed</button>
     </div>
   );
 }
