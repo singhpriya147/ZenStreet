@@ -1,13 +1,81 @@
-
+"use client"
+import { useState } from 'react';
 import './booking.css'
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css'
+import { useAppContext } from '@/context';
+
 const Booking = () => {
+const[phoneNumber,setPhoneNumber]=useState('')
+
+const handlePhoneChange=(value)=>{
+
+setPhoneNumber(value);
+
+}
+
+
+
+const { selectedSlot, BookingDate } = useAppContext();
+
   return (
     <section className='booking'>
-       <div>
-        
-       </div>
+      <div className='booking-wrapper'>
+        <div className='date-price'>
+          <h3>Selected Slot and Date</h3>
+          <p>Slot: {selectedSlot || 'No slot selected'}</p>
+          <h1>Your Booking</h1>
+          {BookingDate ? (
+            <p>Your selected booking date is: {BookingDate.toDateString()}</p>
+          ) : (
+            <p>No booking date selected yet.</p>
+          )}
+        </div>
+        <div className='booking-details'>
+          <div className='form-section'>
+            <form action=''>
+              <div className='name'>
+                <input type='text' placeholder='First Name' />
+                <input type='text' placeholder='Last Name' />
+              </div>
+              <input type='email' name='' id='' placeholder='E-mail' />
+              <PhoneInput
+                country={'us'}
+                value={phoneNumber}
+                onChange={handlePhoneChange}
+                inputProps={{
+                  required: true,
+                }}
+              />
+              {/* {!valid &&  <p>please enter a valid 10 digit number</p>} */}
+              <span style={{ fontStyle: 'italic' }}>
+                i. You will receive booking details on WhatsApp
+              </span>
+            </form>
+          </div>
+
+          <div className='referral'>
+            <h3>Have you been referred by your employer ?</h3>
+            <div className='ref-code'>
+              <div className='ref-code-checkbox'>
+                <input type='checkbox' name='' id='' />
+                <span>yes, I am employed under a parterning company</span>
+              </div>
+              <input
+                type='text'
+                placeholder='Partnering company Name or comapany Id'
+                className='companyID'
+              />
+              <button className='verification'>Verify</button>
+            </div>
+          </div>
+          <div>
+            <button>Book Session</button>
+          </div>
+        </div>
+      </div>
     </section>
-  )
+  );
 }
 
 export default Booking

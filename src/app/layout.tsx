@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 // import localFont from "next/font/local";
 import { Poppins } from 'next/font/google';
 import "./globals.css";
-
+import { AppWrapper } from '../context/index';
 const poppins = Poppins({
   subsets: ['latin'], // Specify the character subset you need
   variable: '--font-poppins', // Optional CSS variable for the font
@@ -31,10 +31,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={poppins.variable}>
-        {children}
-      </body>
-    </html>
+    <AppWrapper>
+      <html lang='en'>
+        <body className={poppins.variable}>{children}</body>
+      </html>
+    </AppWrapper>
   );
 }
