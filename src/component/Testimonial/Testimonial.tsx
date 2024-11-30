@@ -7,7 +7,7 @@ const Testimonial = ({test,user}) => {
         <div className='testimonial'>
           <Comma />
           <Comma />
-          <p>"{test}"</p>
+          <p>&quot;{test}&quot;</p>
         </div>
         <div className='user'>
           <span>{user}</span>

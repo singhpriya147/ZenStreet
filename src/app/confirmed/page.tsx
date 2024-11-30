@@ -8,8 +8,8 @@ const Confirmed = () => {
           <h2>Booking Confirmed!</h2>
           <p>
             Congratulations! Your therapy session has been successfully
-            scheduled. We're looking forward to helping you on your journey to
-            better mental health.
+            scheduled. We&#39;re looking forward to helping you on your journey
+            to better mental health.
           </p>
         </div>
         <div>
