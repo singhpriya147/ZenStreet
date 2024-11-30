@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Chatbot product Landing page
 
-## Getting Started
+ This  assignment is for Zenstreet
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  
+## Technologies and Packages Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next js**: A JavaScript library for building user interfaces.
+- **CSS**: Styling the application.
+  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ScreenShot
+![Screenshot (1048)](https://github.com/user-attachments/assets/144be0aa-873c-464e-b13a-8a53a77cf8af)
+![Screenshot (1049)](https://github.com/user-attachments/assets/554e715d-9772-4471-ba67-87667cf75818)
+![Screenshot (1050)](https://github.com/user-attachments/assets/85072deb-028f-4342-ad03-f4b2caaa40e1)
+![Screenshot (1051)](https://github.com/user-attachments/assets/5e22cd61-c122-4414-83fe-9864f7ad657a)
+![Screenshot (1052)](https://github.com/user-attachments/assets/31fae8f4-ca31-4fc0-ac5d-6e7cfc702fdf)
+![Screenshot (1053)](https://github.com/user-attachments/assets/40f097f7-d2c4-409b-8303-eb3943fa5d1d)
+![Screenshot (1054)](https://github.com/user-attachments/assets/9bdf2e5b-dc5f-4a94-bd1c-684496fcdf34)
+![Screenshot (1055)](https://github.com/user-attachments/assets/a78250ea-f3d5-46ce-aa85-b60fa7eb955c)
+![Screenshot (1056)](https://github.com/user-attachments/assets/a7749ab3-0efc-431a-b8ed-25fa690a42a0)
+![Screenshot (1057)](https://github.com/user-attachments/assets/2c62b527-8d6f-4dc7-bda1-efebfaa70ac5)
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Running the project
+### Installation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Clone the Repository:**
+    ```bash
+    git clone https://github.com/singhpriya147/Bargenix_Priya-Singh_Frontend.git
+ 
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Install Dependencies:**
+    ```bash
+    npm install
+
+### Quick Start
+Follow these steps to quickly start the project:
+1. **Run the Application:**
+    ```bash
+    npm run dev
+  
+    ```
+
+2. **Access the Application:**
+   Open your web browser and go to `http://localhost:3000` to access the app.
+
+
+
