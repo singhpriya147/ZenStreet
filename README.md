@@ -32,7 +32,7 @@
 
 1. **Clone the Repository:**
     ```bash
-    git clone https://github.com/singhpriya147/Bargenix_Priya-Singh_Frontend.git
+    git clone https://github.com/singhpriya147/ZenStreet.git
  
     ```
 
